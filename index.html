@@ -5,26 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sustentabilidade no Agronegócio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 
     <header>
         <div class="logo"> Agro Sustentável</div>
 
-        <nav>
+        <div class="menu-toggle" onclick="abrirMenu()">☰</div>
+
+        <nav id="menu">
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#producao">Produção</a></li>
                 <li><a href="#sustentabilidade">Sustentabilidade</a></li>
                 <li><a href="#desafios">Desafios</a></li>
                 <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#quiz">Quiz</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="inicio" class="banner">
-        <div class="banner-texto">
+        <div class="banner-texto fade">
             <h1>Produzir hoje preservando o amanhã</h1>
             <p>
                 Tecnologia, inovação e sustentabilidade caminhando juntas no agronegócio.
@@ -33,116 +38,142 @@
         </div>
     </section>
 
-    <section id="producao" class="secao">
+    <section id="producao" class="secao fade">
         <h2>Produção Agrícola</h2>
 
         <div class="cards">
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="Plantação">
                 <h3>Importância Econômica</h3>
                 <p>
-                    O agronegócio é um dos principais setores da economia brasileira,
-                    gerando empregos e exportações.
+                    O agronegócio movimenta a economia brasileira e gera milhões de empregos.
                 </p>
             </div>
 
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Tecnologia">
                 <h3>Tecnologia no Campo</h3>
                 <p>
-                    Máquinas modernas, sensores e softwares aumentam a produtividade.
+                    Máquinas modernas e sensores aumentam a produtividade agrícola.
                 </p>
             </div>
 
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Agricultura">
                 <h3>Crescimento</h3>
                 <p>
-                    A produção agrícola cresce com o apoio da inovação tecnológica.
+                    A inovação tecnológica ajuda no crescimento sustentável da produção.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="sustentabilidade" class="secao verde">
+    <section id="sustentabilidade" class="secao verde fade">
         <h2>Sustentabilidade</h2>
 
         <div class="cards">
             <div class="card">
-                <h3> Conservação do Solo</h3>
+                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Solo">
+                <h3>Conservação do Solo</h3>
                 <p>
-                    Técnicas sustentáveis ajudam a preservar nutrientes e reduzir erosões.
+                    Técnicas sustentáveis preservam nutrientes e evitam erosões.
                 </p>
             </div>
 
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Energia Solar">
                 <h3> Energia Renovável</h3>
                 <p>
-                    Fazendas utilizam energia solar e biomassa para reduzir impactos ambientais.
+                    Uso de energia limpa reduz impactos ambientais.
                 </p>
             </div>
 
             <div class="card">
-                <h3> Irrigação Inteligente</h3>
+                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0" alt="Irrigação">
+                <h3>Irrigação Inteligente</h3>
                 <p>
-                    Sistemas automáticos economizam água e aumentam a eficiência.
+                    Sistemas automatizados ajudam a economizar água.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="desafios" class="secao">
+    <section id="desafios" class="secao fade">
         <h2>Desafios Ambientais</h2>
 
         <div class="cards">
             <div class="card">
-                <h3> Desmatamento</h3>
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Desmatamento">
+                <h3>Desmatamento</h3>
                 <p>
-                    A expansão agrícola pode causar perda de vegetação nativa.
+                    O crescimento agrícola sem controle ameaça florestas.
                 </p>
             </div>
 
             <div class="card">
-                <h3> Emissão de Carbono</h3>
+                <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef" alt="Poluição">
+                <h3>🌫️ Emissão de Carbono</h3>
                 <p>
-                    Máquinas agrícolas e queimadas contribuem para o aquecimento global.
+                    A emissão de gases contribui para o aquecimento global.
                 </p>
             </div>
 
             <div class="card">
-                <h3> Uso da Água</h3>
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Água">
+                <h3>Uso da Água</h3>
                 <p>
-                    O desperdício hídrico é um dos grandes desafios do setor.
+                    O desperdício hídrico é um dos principais desafios ambientais.
                 </p>
             </div>
         </div>
     </section>
 
-    <section id="solucoes" class="secao verde">
+    <section id="solucoes" class="secao verde fade">
         <h2>Soluções e Futuro</h2>
 
         <div class="cards">
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="Drone">
                 <h3> Drones Agrícolas</h3>
                 <p>
-                    Monitoram plantações e ajudam na identificação de problemas.
+                    Monitoramento inteligente das plantações.
                 </p>
             </div>
 
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469" alt="Agricultura sustentável">
                 <h3> Agricultura Regenerativa</h3>
                 <p>
-                    Técnicas que recuperam o solo e preservam o meio ambiente.
+                    Recuperação do solo e preservação ambiental.
                 </p>
             </div>
 
             <div class="card">
-                <h3> Tecnologia</h3>
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Tecnologia">
+                <h3>Inteligência Artificial</h3>
                 <p>
-                    Inteligência artificial e automação ajudam na produção sustentável.
+                    IA e automação ajudam no controle da produção agrícola.
                 </p>
             </div>
         </div>
     </section>
 
-    <section class="quiz secao">
+    <section class="secao fade">
+        <h2>Dados do Agronegócio</h2>
+        <canvas id="grafico"></canvas>
+    </section>
+
+    <section id="calculadora" class="secao verde fade">
+        <h2>Calculadora Ambiental</h2>
+
+        <div class="calculadora-box">
+            <input type="number" id="agua" placeholder="Litros de água utilizados">
+            <button onclick="calcularImpacto()">Calcular Impacto</button>
+            <p id="impacto"></p>
+        </div>
+    </section>
+
+    <section id="quiz" class="quiz secao fade">
         <h2>Quiz Sustentável</h2>
         <p>Qual destas tecnologias ajuda a economizar água?</p>
 
@@ -153,7 +184,7 @@
         <p id="resultado"></p>
     </section>
 
-    <section id="contato" class="secao contato">
+    <section id="contato" class="secao contato fade">
         <h2>Contato e Conscientização</h2>
 
         <form>
@@ -169,7 +200,7 @@
     </section>
 
     <footer>
-        <p>Site educativo sobre Sustentabilidade no Agronegócio </p>
+        <p>Site educativo sobre Sustentabilidade no Agronegócio 🌱</p>
     </footer>
 
     <script src="script.js"></script>
