@@ -15,12 +15,12 @@
         }
 
         body {
-            background-color: #fdf6e3; /* bege suave */
+            background-color: #fdf6e3;
             color: #333;
         }
 
         header {
-            background-color: #2e7d32; /* verde elegante */
+            background-color: #2e7d32;
             color: #fdf6e3;
             display: flex;
             justify-content: space-between;
@@ -53,25 +53,29 @@
         }
 
         .banner {
-            height: 90vh;
-            background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
-            background-size: cover;
-            background-position: center;
+            height: 70vh;
+            background: linear-gradient(135deg, #81c784, #fdf6e3);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: #fdf6e3;
+            color: #1b5e20;
         }
 
         .banner-texto {
-            background-color: rgba(46,125,50,0.7);
+            background-color: rgba(255,255,255,0.8);
             padding: 40px;
             border-radius: 15px;
+            animation: bounce 2s infinite alternate;
+        }
+
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
         }
 
         .banner h1 {
-            font-size: 50px;
+            font-size: 45px;
             margin-bottom: 20px;
         }
 
@@ -93,6 +97,7 @@
         .banner button:hover {
             background-color: #66bb6a;
             color: #fdf6e3;
+            transform: scale(1.1);
         }
 
         .secao {
@@ -116,33 +121,23 @@
         .card {
             background-color: #fffbea;
             padding: 25px;
-            width: 300px;
+            width: 280px;
             border-radius: 15px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             transition: 0.3s;
             text-align: center;
+            font-size: 18px;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px; /* altura fixa */
-            object-fit: cover; /* mantém proporção */
-            border-radius: 10px;
-            margin-bottom: 15px;
-            transition: transform 0.3s ease;
-        }
-
-        .card img:hover {
-            transform: scale(1.05);
+            transform: rotate(-2deg) scale(1.05);
+            background-color: #e8f5e9;
         }
 
         .card h3 {
             margin-bottom: 15px;
             color: #2e7d32;
+            font-size: 22px;
         }
 
         .verde {
@@ -169,6 +164,7 @@
         .quiz button:hover {
             background-color: #66bb6a;
             color: #fdf6e3;
+            transform: scale(1.1);
         }
 
         #resultado {
@@ -236,15 +232,58 @@
                 flex-direction: column;
                 align-items: center;
             }
-
-            .card img {
-                height: 180px;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Seu HTML continua igual ao que você enviou -->
-    <!-- ... -->
+
+    <header>
+        <div class="logo">🌱 Agro Sustentável</div>
+        <nav id="menu">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#producao">Produção</a></li>
+                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="#desafios">Desafios</a></li>
+                <li><a href="#solucoes">Soluções</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#quiz">Quiz</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="banner">
+        <div class="banner-texto fade">
+            <h1>🌍 Produzir hoje, preservar amanhã!</h1>
+            <p>Com tecnologia, inovação e diversão no agronegócio sustentável.</p>
+            <button>Saiba Mais</button>
+        </div>
+    </section>
+
+    <section id="producao" class="secao fade">
+        <h2>Produção Agrícola</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>💰 Importância Econômica</h3>
+                <p>O agronegócio movimenta a economia e gera empregos.</p>
+            </div>
+            <div class="card">
+                <h3>🤖 Tecnologia no Campo</h3>
+                <p>Máquinas modernas e sensores aumentam a produtividade.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Crescimento</h3>
+                <p>A inovação tecnológica ajuda no crescimento sustentável.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- As outras seções seguem o mesmo padrão, sem imagens, só com ícones e textos divertidos -->
+
+    <footer>
+        <p>Site educativo e divertido sobre Sustentabilidade no Agronegócio 🌱✨</p>
+    </footer>
+
 </body>
 </html>
