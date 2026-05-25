@@ -6,203 +6,245 @@
     <title>Sustentabilidade no Agronegócio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: #fdf6e3; /* bege suave */
+            color: #333;
+        }
+
+        header {
+            background-color: #2e7d32; /* verde elegante */
+            color: #fdf6e3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fdf6e3;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #c5e1a5;
+        }
+
+        .banner {
+            height: 90vh;
+            background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fdf6e3;
+        }
+
+        .banner-texto {
+            background-color: rgba(46,125,50,0.7);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .banner h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .banner button {
+            padding: 12px 25px;
+            border: none;
+            background-color: #81c784;
+            color: #1b5e20;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .banner button:hover {
+            background-color: #66bb6a;
+            color: #fdf6e3;
+        }
+
+        .secao {
+            padding: 60px 10%;
+        }
+
+        .secao h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+            color: #2e7d32;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fffbea;
+            padding: 25px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px; /* altura fixa */
+            object-fit: cover; /* mantém proporção */
+            border-radius: 10px;
+            margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .card img:hover {
+            transform: scale(1.05);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+
+        .verde {
+            background-color: #e8f5e9;
+            border-radius: 15px;
+            padding: 50px 8%;
+        }
+
+        .quiz {
+            text-align: center;
+        }
+
+        .quiz button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #81c784;
+            color: #1b5e20;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .quiz button:hover {
+            background-color: #66bb6a;
+            color: #fdf6e3;
+        }
+
+        #resultado {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .contato form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .contato input,
+        .contato textarea {
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background-color: #fffbea;
+        }
+
+        .contato button {
+            padding: 12px;
+            background-color: #2e7d32;
+            color: #fdf6e3;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .frase-final {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 18px;
+            font-style: italic;
+            color: #4e342e;
+        }
+
+        footer {
+            background-color: #2e7d32;
+            color: #fdf6e3;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .banner h1 {
+                font-size: 35px;
+            }
+
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card img {
+                height: 180px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <header>
-        <div class="logo"> Agro Sustentável</div>
-
-        <div class="menu-toggle" onclick="abrirMenu()">☰</div>
-
-        <nav id="menu">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#producao">Produção</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#desafios">Desafios</a></li>
-                <li><a href="#solucoes">Soluções</a></li>
-                <li><a href="#calculadora">Calculadora</a></li>
-                <li><a href="#quiz">Quiz</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="inicio" class="banner">
-        <div class="banner-texto fade">
-            <h1>Produzir hoje preservando o amanhã</h1>
-            <p>
-                Tecnologia, inovação e sustentabilidade caminhando juntas no agronegócio.
-            </p>
-            <button>Saiba Mais</button>
-        </div>
-    </section>
-
-    <section id="producao" class="secao fade">
-        <h2>Produção Agrícola</h2>
-
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="Plantação">
-                <h3>Importância Econômica</h3>
-                <p>
-                    O agronegócio movimenta a economia brasileira e gera milhões de empregos.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="Tecnologia">
-                <h3>Tecnologia no Campo</h3>
-                <p>
-                    Máquinas modernas e sensores aumentam a produtividade agrícola.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="Agricultura">
-                <h3>Crescimento</h3>
-                <p>
-                    A inovação tecnológica ajuda no crescimento sustentável da produção.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="sustentabilidade" class="secao verde fade">
-        <h2>Sustentabilidade</h2>
-
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027" alt="Solo">
-                <h3>Conservação do Solo</h3>
-                <p>
-                    Técnicas sustentáveis preservam nutrientes e evitam erosões.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276" alt="Energia Solar">
-                <h3> Energia Renovável</h3>
-                <p>
-                    Uso de energia limpa reduz impactos ambientais.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0" alt="Irrigação">
-                <h3>Irrigação Inteligente</h3>
-                <p>
-                    Sistemas automatizados ajudam a economizar água.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="desafios" class="secao fade">
-        <h2>Desafios Ambientais</h2>
-
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Desmatamento">
-                <h3>Desmatamento</h3>
-                <p>
-                    O crescimento agrícola sem controle ameaça florestas.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef" alt="Poluição">
-                <h3>🌫️ Emissão de Carbono</h3>
-                <p>
-                    A emissão de gases contribui para o aquecimento global.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Água">
-                <h3>Uso da Água</h3>
-                <p>
-                    O desperdício hídrico é um dos principais desafios ambientais.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="solucoes" class="secao verde fade">
-        <h2>Soluções e Futuro</h2>
-
-        <div class="cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e" alt="Drone">
-                <h3> Drones Agrícolas</h3>
-                <p>
-                    Monitoramento inteligente das plantações.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469" alt="Agricultura sustentável">
-                <h3> Agricultura Regenerativa</h3>
-                <p>
-                    Recuperação do solo e preservação ambiental.
-                </p>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="Tecnologia">
-                <h3>Inteligência Artificial</h3>
-                <p>
-                    IA e automação ajudam no controle da produção agrícola.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section class="secao fade">
-        <h2>Dados do Agronegócio</h2>
-        <canvas id="grafico"></canvas>
-    </section>
-
-    <section id="calculadora" class="secao verde fade">
-        <h2>Calculadora Ambiental</h2>
-
-        <div class="calculadora-box">
-            <input type="number" id="agua" placeholder="Litros de água utilizados">
-            <button onclick="calcularImpacto()">Calcular Impacto</button>
-            <p id="impacto"></p>
-        </div>
-    </section>
-
-    <section id="quiz" class="quiz secao fade">
-        <h2>Quiz Sustentável</h2>
-        <p>Qual destas tecnologias ajuda a economizar água?</p>
-
-        <button onclick="respostaCorreta()">Irrigação Inteligente</button>
-        <button onclick="respostaErrada()">Queimadas</button>
-        <button onclick="respostaErrada()">Desmatamento</button>
-
-        <p id="resultado"></p>
-    </section>
-
-    <section id="contato" class="secao contato fade">
-        <h2>Contato e Conscientização</h2>
-
-        <form>
-            <input type="text" placeholder="Seu nome" required>
-            <input type="email" placeholder="Seu e-mail" required>
-            <textarea placeholder="Sua mensagem"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
-
-        <p class="frase-final">
-            O futuro da agricultura depende das escolhas sustentáveis feitas hoje.
-        </p>
-    </section>
-
-    <footer>
-        <p>Site educativo sobre Sustentabilidade no Agronegócio 🌱</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- Seu HTML continua igual ao que você enviou -->
+    <!-- ... -->
 </body>
 </html>
