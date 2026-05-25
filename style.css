@@ -1,4 +1,4 @@
-* {
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: #f4f4f4;
+    background-color: #fdf6e3; /* bege suave */
     color: #333;
 }
 
 header {
-    background-color: #1b5e20;
-    color: white;
+    background-color: #2e7d32; /* verde mais elegante */
+    color: #fdf6e3; /* bege claro */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,12 +34,12 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: #fdf6e3;
     font-weight: bold;
 }
 
 nav a:hover {
-    color: #c8e6c9;
+    color: #c5e1a5; /* verde claro */
 }
 
 .banner {
@@ -51,11 +51,11 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: #fdf6e3;
 }
 
 .banner-texto {
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(46,125,50,0.7); /* verde translúcido */
     padding: 40px;
     border-radius: 15px;
 }
@@ -73,15 +73,16 @@ nav a:hover {
 .banner button {
     padding: 12px 25px;
     border: none;
-    background-color: #43a047;
-    color: white;
+    background-color: #81c784; /* verde suave */
+    color: #1b5e20;
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .banner button:hover {
-    background-color: #2e7d32;
+    background-color: #66bb6a;
+    color: #fdf6e3;
 }
 
 .secao {
@@ -92,7 +93,7 @@ nav a:hover {
     text-align: center;
     margin-bottom: 40px;
     font-size: 36px;
-    color: #1b5e20;
+    color: #2e7d32;
 }
 
 .cards {
@@ -103,7 +104,7 @@ nav a:hover {
 }
 
 .card {
-    background-color: white;
+    background-color: #fffbea; /* bege claro */
     padding: 25px;
     width: 300px;
     border-radius: 15px;
@@ -132,14 +133,15 @@ nav a:hover {
     margin: 10px;
     padding: 10px 20px;
     border: none;
-    background-color: #43a047;
-    color: white;
+    background-color: #81c784;
+    color: #1b5e20;
     border-radius: 10px;
     cursor: pointer;
 }
 
 .quiz button:hover {
-    background-color: #2e7d32;
+    background-color: #66bb6a;
+    color: #fdf6e3;
 }
 
 #resultado {
@@ -161,12 +163,13 @@ nav a:hover {
     padding: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
+    background-color: #fffbea;
 }
 
 .contato button {
     padding: 12px;
-    background-color: #1b5e20;
-    color: white;
+    background-color: #2e7d32;
+    color: #fdf6e3;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -177,11 +180,12 @@ nav a:hover {
     margin-top: 30px;
     font-size: 18px;
     font-style: italic;
+    color: #4e342e; /* tom terroso */
 }
 
 footer {
-    background-color: #1b5e20;
-    color: white;
+    background-color: #2e7d32;
+    color: #fdf6e3;
     text-align: center;
     padding: 20px;
 }
@@ -207,3 +211,7 @@ footer {
         align-items: center;
     }
 }
+
+
+
+
