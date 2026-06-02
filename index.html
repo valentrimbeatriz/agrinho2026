@@ -238,7 +238,7 @@
 <body>
 
     <header>
-        <div class="logo">🌱 Agro Sustentável</div>
+        <div class="logo"> Agro Sustentável</div>
         <nav id="menu">
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -286,4 +286,51 @@
     </footer>
 
 </body>
+    <!-- Calculadora de emissões -->
+<section id="calculadora" class="secao verde">
+  <h2>Calculadora de Emissões</h2>
+  <p>Digite a quantidade de hectares cultivados:</p>
+  <input type="number" id="hectares" placeholder="Ex: 50">
+  <button onclick="calcularEmissao()">Calcular</button>
+  <p id="resultadoCalc"></p>
+</section>
+
+<!-- Quiz -->
+<section id="quiz" class="secao">
+  <h2>Quiz Sustentável</h2>
+  <div class="quiz">
+    <p>Qual prática ajuda na sustentabilidade do agronegócio?</p>
+    <button onclick="responderQuiz(true)">Rotação de culturas</button>
+    <button onclick="responderQuiz(false)">Uso excessivo de agrotóxicos</button>
+    <p id="resultadoQuiz"></p>
+  </div>
+</section>
+
+<script>
+  // Função da calculadora
+  function calcularEmissao() {
+    const hectares = document.getElementById("hectares").value;
+    if (hectares <= 0) {
+      document.getElementById("resultadoCalc").innerText = "Digite um valor válido!";
+      return;
+    }
+    // Exemplo: cada hectare gera 2 toneladas de CO₂
+    const emissao = hectares * 2;
+    document.getElementById("resultadoCalc").innerText =
+      `Estimativa: ${emissao} toneladas de CO₂ por ano.`;
+  }
+
+  // Função do quiz
+  function responderQuiz(correto) {
+    const resultado = document.getElementById("resultadoQuiz");
+    if (correto) {
+      resultado.innerText = "✅ Resposta correta! Rotação de culturas é sustentável.";
+      resultado.style.color = "green";
+    } else {
+      resultado.innerText = "❌ Resposta incorreta. Tente novamente!";
+      resultado.style.color = "red";
+    }
+  }
+</script>
+
 </html>
