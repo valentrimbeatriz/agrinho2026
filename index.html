@@ -297,7 +297,30 @@
       <button onclick="responderQuiz(false)">Uso excessivo de agrotóxicos</button>
       <p id="resultadoQuiz"></p>
     </div>
-  </section>
+  </section>  
+
+  <script>
+  function responderQuiz(correto) {
+    const resultado = document.getElementById("resultadoQuiz");
+    const botao1 = document.getElementById("opcao1");
+    const botao2 = document.getElementById("opcao2");
+
+    // Resetar estilos antes de mostrar resultado
+    botao1.style.backgroundColor = "#81c784";
+    botao2.style.backgroundColor = "#81c784";
+
+    if (correto) {
+      resultado.innerText = "✅ Resposta correta! Rotação de culturas é sustentável.";
+      resultado.style.color = "green";
+      botao1.style.backgroundColor = "lightgreen"; // destaca a resposta certa
+    } else {
+      resultado.innerText = "❌ Resposta incorreta. A correta é: Rotação de culturas.";
+      resultado.style.color = "red";
+      botao1.style.backgroundColor = "lightgreen"; // mostra qual era a certa
+      botao2.style.backgroundColor = "salmon";     // marca a errada
+    }
+  }
+</script>
 
   <footer>
     <p>Site educativo e divertido sobre Sustentabilidade no Agronegócio 🌱✨</p>
