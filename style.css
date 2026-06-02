@@ -1,224 +1,175 @@
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, Arial, Helvetica, sans-serif;
 }
 
 body {
-    background-color: #fdf6e3; /* bege suave */
-    color: #333;
+  background-color: #E8FFE5;
+  color: #1A8151;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 header {
-    background-color: #2e7d32; /* verde mais elegante */
-    color: #fdf6e3; /* bege claro */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    position: sticky;
-    top: 0;
+  background-color: #1A8151;
+  color: #E8FFE5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  position: sticky;
+  top: 0;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 28px;
+  font-weight: bold;
+  color: #83FC92;
 }
 
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
+  display: flex;
+  list-style: none;
+  gap: 25px;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fdf6e3;
-    font-weight: bold;
+  text-decoration: none;
+  color: #E8FFE5;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-    color: #c5e1a5; /* verde claro */
+  color: #83FC92;
 }
 
 .banner {
-    height: 90vh;
-    background-image: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fdf6e3;
+  height: 90vh;
+  background: linear-gradient(135deg, #1A8151, #83FC92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #E8FFE5;
 }
 
 .banner-texto {
-    background-color: rgba(46,125,50,0.7); /* verde translúcido */
-    padding: 40px;
-    border-radius: 15px;
+  background-color: rgba(26,129,81,0.8);
+  padding: 50px;
+  border-radius: 20px;
 }
 
 .banner h1 {
-    font-size: 50px;
-    margin-bottom: 20px;
+  font-size: 55px;
+  margin-bottom: 25px;
+  color: #83FC92;
 }
 
 .banner p {
-    font-size: 20px;
-    margin-bottom: 20px;
+  font-size: 22px;
+  margin-bottom: 25px;
 }
 
 .banner button {
-    padding: 12px 25px;
-    border: none;
-    background-color: #81c784; /* verde suave */
-    color: #1b5e20;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+  padding: 14px 28px;
+  border: none;
+  background-color: #1BBA23;
+  color: #E8FFE5;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 18px;
 }
 
 .banner button:hover {
-    background-color: #66bb6a;
-    color: #fdf6e3;
+  background-color: #83FC92;
+  color: #1A8151;
+  transform: scale(1.1);
 }
 
 .secao {
-    padding: 60px 10%;
+  padding: 70px 10%;
 }
 
 .secao h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 36px;
-    color: #2e7d32;
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 40px;
+  color: #1A8151;
 }
 
 .cards {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-    background-color: #fffbea; /* bege claro */
-    padding: 25px;
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.3s;
+  background-color: #E8FFE5;
+  padding: 30px;
+  width: 320px;
+  border-radius: 20px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: 0.3s;
+  text-align: center;
+  font-size: 18px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-8px);
+  background-color: #83FC92;
+  color: #1A8151;
 }
 
 .card h3 {
-    margin-bottom: 15px;
-    color: #2e7d32;
-}
-
-.verde {
-    background-color: #e8f5e9;
-}
-
-.quiz {
-    text-align: center;
+  margin-bottom: 18px;
+  color: #1BBA23;
+  font-size: 24px;
 }
 
 .quiz button {
-    margin: 10px;
-    padding: 10px 20px;
-    border: none;
-    background-color: #81c784;
-    color: #1b5e20;
-    border-radius: 10px;
-    cursor: pointer;
+  margin: 12px;
+  padding: 12px 22px;
+  border: none;
+  background-color: #1BBA23;
+  color: #E8FFE5;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
 .quiz button:hover {
-    background-color: #66bb6a;
-    color: #fdf6e3;
+  background-color: #83FC92;
+  color: #1A8151;
+  transform: scale(1.1);
 }
 
-#resultado {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
+#resultadoQuiz {
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.contato form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.contato input,
-.contato textarea {
-    padding: 12px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    background-color: #fffbea;
-}
-
-.contato button {
-    padding: 12px;
-    background-color: #2e7d32;
-    color: #fdf6e3;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.frase-final {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 18px;
-    font-style: italic;
-    color: #4e342e; /* tom terroso */
-}
-
-footer {
-    background-color: #2e7d32;
-    color: #fdf6e3;
-    text-align: center;
-    padding: 20px;
-}
-
-@media (max-width: 768px) {
-
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .banner h1 {
-        font-size: 35px;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-
-}
 .correto {
-  background-color: lightgreen !important;
+  background-color: #83FC92 !important;
+  color: #1A8151 !important;
 }
 
 .errado {
   background-color: salmon !important;
+  color: #fff !important;
 }
 
-
-
-
+footer {
+  background-color: #1A8151;
+  color: #E8FFE5;
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+}
